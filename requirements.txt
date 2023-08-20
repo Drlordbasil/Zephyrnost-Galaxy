@@ -1,0 +1,11 @@
+The package requirements for this Python program are as follows:
+
+- pandas
+- matplotlib
+
+Here is the requirements.txt file:
+
+```
+pandas
+matplotlib
+```
