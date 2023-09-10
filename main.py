@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import time
 from random import randint
 
+
 class ExpenseTracker:
     def __init__(self):
         self.expenses = []
@@ -19,10 +20,12 @@ class ExpenseTracker:
         plt.title("Expense Tracker")
         plt.show()
 
+
 class BudgetOptimizer:
     def generate_budget(self):
         while True:
-            expenses = input("Enter your expected expenses (comma-separated): ")
+            expenses = input(
+                "Enter your expected expenses (comma-separated): ")
             try:
                 expenses = [float(expense) for expense in expenses.split(",")]
                 total_expenses = sum(expenses)
@@ -33,6 +36,7 @@ class BudgetOptimizer:
 
     def analyze_spending(self, expenses):
         print("Spending analysis complete.")
+
 
 class InvestmentAdvisor:
     def __init__(self, financial_goals, risk_tolerance):
@@ -45,13 +49,16 @@ class InvestmentAdvisor:
     def optimize_portfolio(self):
         print("Optimize investment portfolio based on financial goals and risk tolerance.")
 
+
 class DebtManager:
     def __init__(self, debt_balances, interest_rates):
         self.debt_balances = debt_balances
         self.interest_rates = interest_rates
 
     def recommend_debt_management_strategy(self):
-        print("Recommend debt management strategy based on debt balances and interest rates.")
+        print(
+            "Recommend debt management strategy based on debt balances and interest rates.")
+
 
 class TaxOptimizer:
     def __init__(self, income, expenses):
@@ -61,6 +68,7 @@ class TaxOptimizer:
     def optimize_tax_payments(self):
         print("Optimize tax payments based on income and expenses.")
 
+
 class RealTimeInsights:
     def generate_insights(self):
         print("Generating real-time insights...")
@@ -69,11 +77,13 @@ class RealTimeInsights:
         for insight in insights:
             print(insight)
 
+
 class FinancialPlanner:
     def __init__(self):
         self.expense_tracker = ExpenseTracker()
         self.budget_optimizer = BudgetOptimizer()
-        self.investment_advisor = InvestmentAdvisor(financial_goals=[], risk_tolerance=0)
+        self.investment_advisor = InvestmentAdvisor(
+            financial_goals=[], risk_tolerance=0)
         self.debt_manager = DebtManager(debt_balances=[], interest_rates=[])
         self.tax_optimizer = TaxOptimizer(income=0, expenses=None)
         self.real_time_insights = RealTimeInsights()
@@ -107,7 +117,8 @@ class FinancialPlanner:
             elif choice == 3:
                 self.budget_optimizer.generate_budget()
             elif choice == 4:
-                self.budget_optimizer.analyze_spending(self.expense_tracker.expenses)
+                self.budget_optimizer.analyze_spending(
+                    self.expense_tracker.expenses)
             elif choice == 5:
                 self.investment_advisor.recommend_investments()
             elif choice == 6:
@@ -124,6 +135,7 @@ class FinancialPlanner:
                 break
             else:
                 print("Invalid choice. Please try again.")
+
 
 if __name__ == '__main__':
     financial_planner = FinancialPlanner()
