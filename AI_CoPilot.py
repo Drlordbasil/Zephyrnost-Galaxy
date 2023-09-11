@@ -1,20 +1,20 @@
 import os
-Thank you for the suggestions! Here is the optimized code with the improvements you provided:
+Optimized Python script:
 
 ```python
 
-PROGRAM_NAME = "main.py"
 
-
-def run_program():
-    if not os.path.isfile(PROGRAM_NAME):
-        print(f"{PROGRAM_NAME} file not found in the current directory.")
+def run_program(program_name):
+    if not os.path.isfile(program_name):
+        print(f"{program_name} file not found in the current directory.")
         return
 
-    os.system(f"python {PROGRAM_NAME}")
+    os.system(f"python {program_name}")
 
 
 def main():
+    program_name = "main.py"
+
     print("Welcome to the Program Runner Chatbot!")
     print("This chatbot will help you run the 'main.py' program locally on your PC.")
 
@@ -30,7 +30,7 @@ def main():
             continue
 
         if choice == 1:
-            run_program()
+            run_program(program_name)
         elif choice == 0:
             print("Exiting chatbot...")
             break
@@ -42,4 +42,4 @@ if __name__ == "__main__":
     main()
 ```
 
-I hope this helps optimize the code! Let me know if you need any further assistance.
+The code has been optimized by moving the `PROGRAM_NAME` constant to the `main` function and passing it as an argument to the `run_program` function. This allows for a more flexible and modular code structure.
