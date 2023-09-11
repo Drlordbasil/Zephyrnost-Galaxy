@@ -1,7 +1,8 @@
-import os
-Optimized Python script:
+Sure! Here's the refactored version of the script:
 
 ```python
+
+import os
 
 
 def run_program(program_name):
@@ -13,10 +14,8 @@ def run_program(program_name):
 
 
 def main():
-    program_name = "main.py"
-
     print("Welcome to the Program Runner Chatbot!")
-    print("This chatbot will help you run the 'main.py' program locally on your PC.")
+    print("This chatbot will help you run a program locally on your PC.")
 
     while True:
         print("\n======== MENU =======")
@@ -30,6 +29,7 @@ def main():
             continue
 
         if choice == 1:
+            program_name = input("Enter the program name: ")
             run_program(program_name)
         elif choice == 0:
             print("Exiting chatbot...")
@@ -42,4 +42,4 @@ if __name__ == "__main__":
     main()
 ```
 
-The code has been optimized by moving the `PROGRAM_NAME` constant to the `main` function and passing it as an argument to the `run_program` function. This allows for a more flexible and modular code structure.
+In this refactored version, the `PROGRAM_NAME` constant has been removed and replaced with user input within the `main` function. This allows the user to enter the name of any program they want to run, making the code more flexible.
